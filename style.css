@@ -1,18 +1,20 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Mukta', sans-serif;
+    font-family: 'Hedvig Letters Sans', sans-serif;
     background-color: black;
     color: white;
 }
 
 .head {
+    /* position: relative; */
     border: 0px solid black;
     height: 90vh;
     background-image: url(HomeImg.jpg);
     z-index: 8;
     background-position: center center;
     background-repeat: no-repeat;
+
 
 }
 
@@ -21,6 +23,7 @@ body {
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.66);
     z-index: 10;
+    box-shadow: inset 0px 90px 100px 20px black;
 
 
 }
@@ -43,6 +46,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2px;
+
 
 
 }
@@ -104,11 +108,13 @@ input {
     padding: 15px 80px;
     border-radius: 5px;
 }
-.lang{
+
+.lang {
     padding: 9px;
     background-color: rgba(0, 0, 0, 0.292);
     color: white;
 }
+
 hr {
     background-color: rgb(55, 52, 52);
     border: 1px solid rgb(55, 52, 52);
@@ -120,13 +126,15 @@ hr {
 }
 
 .streap {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 70vh;
     max-width: 80vw;
     margin: auto;
-    height: 70vh;
-
+    justify-items: center;
 }
+
+
 
 .text {
     color: white;
@@ -152,46 +160,54 @@ video {
     right: -83px;
     top: -387px;
 }
-.photo{
+
+.photo {
     position: relative;
     display: flex;
     z-index: 10;
 }
-.video{
+
+.video {
     position: relative;
     display: flex;
     z-index: 8;
 }
-.vid2{
+
+.vid2 {
     right: -120px;
 }
-h1{
+
+h1 {
     font-size: 50px;
-    margin-left: 400px;
-    
+    margin-left: 25vw;
+
 }
-.faq{
+
+.faq {
     color: white;
 
 }
-.fbox{
+
+.fbox {
     display: flex;
     max-width: 70vw;
     background-color: rgba(37, 36, 37, 0.877);
     justify-content: space-between;
     margin: auto;
     padding: 10px;
-    font-size:20px;
+    font-size: 20px;
     font-weight: 100px;
     height: 8vh;
     align-items: center;
     margin-bottom: 10px
 }
-svg{
+
+svg {
     margin: 10px;
     scale: 1.2;
 }
-footer{
+
+footer {
     display: grid;
     grid-template-columns: 20vw 20vw 20vw 20vw;
     grid-template-rows: 4vh 4vh 4vh 4vh;
@@ -200,19 +216,214 @@ footer{
     margin: auto;
     color: rgb(134, 128, 128);
 }
-article{
+
+article {
     margin-left: 9.5vw;
     color: rgb(134, 128, 128);
 }
-section>div{
+
+section>div {
     display: flex;
     justify-content: center;
     max-width: 70vw;
     margin: 30px auto 30px auto;
 }
-section>div:nth-child(2){
+
+section>div:nth-child(2) {
     justify-content: space-evenly;
 }
-section{
+
+section {
     margin: 50px 0px 50px 0px;
+}
+
+@media only screen and (max-width: 1454px) {
+    .hea:nth-child(5) {
+        justify-content: space-evenly;
+        max-width: 60vw;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 1271px) {
+    .media {
+        scale: 0.6;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .content {
+        scale: 0.7;
+    }
+
+    .nav {
+        scale: 0.8;
+    }
+
+    input {
+        padding: 15px 50px 15px 20px;
+    }
+
+    .red-btn-2 {
+        font-size: medium;
+        padding: 15px 40px;
+    }
+
+    .hea:nth-child(1) {
+        font-weight: 900;
+        font-size: 40px;
+    }
+
+    .text {
+        scale: 0.6;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .fbox {
+        font-size: 10px;
+        font-weight: 80px;
+        height: 5vh;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .text {
+        scale: 0.3;
+    }
+
+    .hea:nth-child(1) {
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .hea:nth-child(2) {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .hea:nth-child(3) {
+
+        font-size: 19px;
+    }
+
+    .hea:nth-child(4) {
+        font-size: 15px;
+    }
+
+    .head {
+        scale: 1.2;
+    }
+
+    .nav {
+        position: relative;
+        top: 50px;
+    }
+
+    input {
+        padding: 15px 15px 15px 10px;
+    }
+
+    .red-btn-2 {
+        font-size: medium;
+        padding: 15px 10px;
+    }
+
+    .media {
+        scale: 0.4;
+    }
+
+    .streap {
+        grid-template-rows: 50vh;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .fbox {
+        font-size: 8px;
+        font-weight: 5px;
+        height: 5vh;
+        max-width: 60%;
+    }
+
+    svg {
+        margin: 10px;
+        scale: 0.8;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 40vw 40vw;
+        grid-template-rows: 4vh 4vh 4vh 4vh 4vh 4vh 4vh 4vh;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .nav {
+        position: relative;
+        top: 50px;
+        scale: 0.6;
+    }
+
+    .hea:nth-child(1) {
+        font-weight: 200;
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+
+    .hea:nth-child(2) {
+        font-weight: 200;
+        font-size: 15px;
+    }
+
+    .hea:nth-child(3) {
+
+        font-size: 10px;
+    }
+
+    .hea:nth-child(4) {
+        font-size: 10px;
+    }
+
+    input {
+        padding: 9px 19px 9px 5px;
+        font-size: 8px;
+    }
+
+    .red-btn-2 {
+        font-size: 8px;
+        padding: 9px 5px;
+    }
+
+    .head {
+        /* position: relative; */
+        border: 0px solid black;
+        height: 40vh;
+    }
+
+    .text {
+        scale: 0.3;
+    }
+
+    .media {
+        scale: 0.2;
+    }
+
+    .box {
+        height: 40vh;
+    }
+
+    .content {
+        margin-top: 10vh;
+    }
+
+    .streap {
+        grid-template-rows: 30vh;
+    }
+
 }
